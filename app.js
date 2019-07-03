@@ -1,3 +1,4 @@
+// importing modules
 const express = require("express");
 const session = require("express-session");
 const app = express();
@@ -8,6 +9,7 @@ const cors = require("cors");
 const path = require("path");
 const port = 8000;
 
+// connecting mongoose with mongodb
 mongoose.connect(
   "mongodb://localhost/altlab",
   { useNewUrlParser: true },
@@ -24,6 +26,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("views", path.join(__dirname, "./server/views"));
 app.set("view engine", "ejs");
 
+// integrating sessions
 app.use(
   session({
     secret: "altlab",
@@ -50,9 +53,12 @@ if (process.env.NODE_ENV === "development") {
 
 app.use(cors());
 
+// routing requests
+app.use("/users", require("./server/routes/users"));
 app.use("/api", require("./server/routes/api"));
 app.use(require("./server/routes/index"));
 
+// adding port
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
