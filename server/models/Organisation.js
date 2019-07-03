@@ -22,7 +22,6 @@ let orgSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
-  // TODO: do we include the creator in the list of members or just keep that user separate
   // array of users in the organisation
   members: [{
     type: mongoose.Schema.Types.ObjectId,

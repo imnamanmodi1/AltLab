@@ -29,7 +29,6 @@ let projectSchema = new mongoose.Schema({
     ref: "User",
   },
   // list of all collaborators 
-  // TODO : does this list includes the reference to the developer as well?
   collaborators: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",

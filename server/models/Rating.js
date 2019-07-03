@@ -6,7 +6,6 @@ let mongoose = require("mongoose");
 // defining rating schema
 let ratingSchema = new mongoose.Schema({
   // the rating
-  // TODO: minlength: 1, maxLength: 5, check and fix if authentication not working, do we add provision for fractional stars?
   rating: {
     type: Number,
     required: true,
