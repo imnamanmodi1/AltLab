@@ -8,7 +8,9 @@
 
 # TODO.md
 ## Shreyansh
-
+- (NAMAN) /users => handle login / logout /signup (gmail oauth)
+- (SUNNY) layout, favicon
+- (ME) => Models
 
 ## Naman
 
