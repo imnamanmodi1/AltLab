@@ -44,7 +44,7 @@ let userSchema = new mongoose.Schema({
   },
   // projects user developed + collaborated on
   projects: [{
-    type: mongoose.Schema.Types.ObjectId, 
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'Project'
   }],
   // organisations he belongs to on our website
@@ -62,7 +62,9 @@ let userSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Rating",
   }],
-}, { timestamps: true });
+}, {
+    timestamps: true,
+  });
 
 
 

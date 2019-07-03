@@ -48,8 +48,8 @@ let projectSchema = new mongoose.Schema({
     ref: "Rating",
   }],
 }, {
-  timestamps: true,
-});
+    timestamps: true,
+  });
 
 // requiring and exporting model
 let Project = mongoose.model("Project", projectSchema);
